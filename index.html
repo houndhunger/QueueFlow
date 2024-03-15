@@ -15,28 +15,143 @@
 <body>
 
     <h1 class="heading">
-        <img class="logo" src="assets/images/logo.png"></img>
+        <!--<img class="logo" src="assets/images/logo.png"></img>-->
+        QueueFlow
     </h1>
-    <h2>Request:</h2>
-    <div class="request">
-        <form action="POST">
+    
+    <section id="settings-section">
+        <h2>Settings:</h2> 
+        <form id="settings-form" method="POST" action="">
+            <label for="first_name">Name</label><span>*</span><br>
+            <input type="text" name="first_name" id="first_name" class="text-input first-name" required autocomplete="on">
+            <br>
+            <label for="email_address">Email</label><span>*</span><br>
+            <input type="email" name="email_address" id="email_address" class="text-input" required autocomplete="on">
+            <br>
+            <h3>Notifications:</h3>
+            <input type="checkbox" id="notify-browser" name="notify-browser" value="true">
+            <label for="checkbox1">in web browser notification</label>
+            <br>
+            <input type="checkbox" id="notify-teams" name="notify-teams" value="true">
+            <label for="checkbox1">in Microsoft Teams Chat</label>
+            <br>
+            <input type="checkbox" id="notify-email" name="notify-email" value="true">
+            <label for="checkbox1">by email</label>
+            <br>
+            <button type="submit" class="submit-button" aria-label="Save settings">Save</button>
+        </form>
+    </section>
+
+    <div class="clearfix"></div>
+
+    <section id="request-section">
+        <h2>Request to queue:</h2>
+        <form id="request-form" method="" action="">
             <button>Planned</button>
             <button>Urgent</button>
             <button>Instant</button>
             <button>Cancel</button>
         </form>
+    </section>
 
-    </div>
+    <section id="queue-table-section">
+        <h2>Queue:</h2>
+        <table class="5columns">
+            <thead>
+              <tr>
+                <th>Name:</th>
+                <th>Request time:</th>
+                <th>Request type:</th>
+                <th>Up</th>
+                <th>Down</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Data 1</td>
+                <td>Data 2</td>
+                <td>Data 3</td>
+                <td></td>
+                <td><button>Down</button></td>
+              </tr>
+              <tr>
+                <td>Data 4</td>
+                <td>Data 5</td>
+                <td>Data 6</td>
+                <td><button>Up</button></td>
+                <td><button>Down</button></td>
+              </tr>
+              <tr>
+                <td>Data 7</td>
+                <td>Data 8</td>
+                <td>Data 9</td>
+                <td><button>Up</button></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>    
+    </section>
 
+    <section class="log-table-section">
+        <h2>Processing:</h2>
+        <table class="3columns">
+            <thead>
+                <tr>
+                <th>Name:</th>
+                <th>Request time:</th>
+                <th>Request type:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <td>Data 1</td>
+                <td>Data 2</td>
+                <td>Data 3</td>
+                </tr>
+            </tbody>
+        </table>  
+    </section>
 
-    <div class="queue-table">
+    <section class="log-table-section">
+        <h2>Queue log:</h2>
+        <table class="4columns">
+            <thead>
+              <tr>
+                <th>Name:</th>
+                <th>Request time:</th>
+                <th>Request type:</th>
+                <th>Request done:</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Data 1</td>
+                    <td>Data 2</td>
+                    <td>Data 3</td>
+                    <td>Data 3</td>
+                </tr>
+                <tr>
+                    <td>Data 4</td>
+                    <td>Data 5</td>
+                    <td>Data 6</td>
+                    <td>Data 3</td>
+                </tr>
+                <tr>
+                    <td>Data 1</td>
+                    <td>Data 2</td>
+                    <td>Data 3</td>
+                    <td>Data 3</td>
+                </tr>
+                <tr>
+                    <td>Data 4</td>
+                    <td>Data 5</td>
+                    <td>Data 6</td>
+                    <td>Data 3</td>
+                </tr>
+            </tbody>
+          </table>  
+    </section>
 
-    </div>
-
-    <div class="log-table">
-
-    </div>
-
-    <script src="assets/js/script.js"></script>    
+    <!--<script src="assets/js/script.js"></script>   --> 
 </body>
 </html>
