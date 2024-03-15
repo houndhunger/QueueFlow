@@ -1,166 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- font awsome and google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <!-- font awsome and google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
 
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>QueueFlow</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>QueueFlow</title>
 </head>
+
 <body>
+  <!-- Header -->
+  <header>
+    <div class="info-section">
+      <span class="label">Name:</span>
+      <span class="value">John Doe</span>
+      <span class="label">Email:</span>
+      <span class="value">john.doe@gmail.com</span>
+    </div>
 
-    <h1 class="heading">
-        <!--<img class="logo" src="assets/images/logo.png"></img>-->
-        QueueFlow
-    </h1>
-    
-    <section id="settings-section">
-        <h2>Settings:</h2> 
+    <input type="checkbox" name="nav-toggle" id="nav-toggle">
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation menu">
+      <i class="fa-solid fa-gear"></i></label>
+    <nav aria-label="Main Navigation">
+      <section id="settings-section">
+        <h2>Settings:</h2>
         <form id="settings-form" method="POST" action="">
-            <label for="first_name">Name</label><span>*</span><br>
-            <input type="text" name="first_name" id="first_name" class="text-input first-name" required autocomplete="on">
-            <br>
-            <label for="email_address">Email</label><span>*</span><br>
-            <input type="email" name="email_address" id="email_address" class="text-input" required autocomplete="on">
-            <br>
-            <h3>Notifications:</h3>
-            <input type="checkbox" id="notify-browser" name="notify-browser" value="true">
-            <label for="checkbox1">in web browser notification</label>
-            <br>
-            <input type="checkbox" id="notify-teams" name="notify-teams" value="true">
-            <label for="checkbox1">by Microsoft Teams Chat</label>
-            <br>
-            <input type="checkbox" id="notify-email" name="notify-email" value="true">
-            <label for="checkbox1">by email</label>
-            <br>
-            <button type="submit" class="submit-button" aria-label="Save settings">Save</button>
-            <button type="submit" class="erase-button" aria-label="Erase settings">Erase</button>
+          <label for="name">Name</label><span>*</span><br>
+          <input type="text" name="name" id="name" class="text-input" required autocomplete="on">
+          <br>
+          <label for="email_address">Email</label><span>*</span><br>
+          <input type="email" name="email_address" id="email_address" class="text-input" required autocomplete="on">
+          <br>
+          <h3>Notifications:</h3>
+          <input type="checkbox" id="notify-browser" name="notify-browser" value="true">
+          <label for="checkbox1">in web browser notification</label>
+          <br>
+          <input type="checkbox" id="notify-teams" name="notify-teams" value="true">
+          <label for="checkbox1">by Microsoft Teams Chat</label>
+          <br>
+          <input type="checkbox" id="notify-email" name="notify-email" value="true">
+          <label for="checkbox1">by email</label>
+          <br>
+          <button type="submit" class="submit-button" aria-label="Save settings">Save</button>
+          <button type="submit" class="erase-button" aria-label="Erase settings">Erase</button>
         </form>
-    </section>
+      </section>
+    </nav>
+  </header>
 
-    <div class="clearfix"></div>
+  <!-- Main -->
+  <main class="standard-main">
+    <h1 class="heading">
+      <!--<img class="logo" src="assets/images/logo.png"></img>-->
+      QueueFlow
+    </h1>
+
 
     <section id="request-section">
-        <h2>Request to queue:</h2>
-        <form id="request-form" method="" action="">
-            <button>Planned</button>
-            <button>Urgent</button>
-            <button>Instant</button>
-            <button>Cancel</button>
-        </form>
+      <h2>Request to queue:</h2>
+      <form id="request-form" method="" action="">
+        <button>Planned</button>
+        <button>Urgent</button>
+        <button>Instant</button>
+        <button>Cancel</button>
+      </form>
     </section>
 
     <section id="queue-table-section">
-        <h2>Queue:</h2>
-        <table class="5columns">
-            <thead>
-              <tr>
-                <th>Name:</th>
-                <th>Request time:</th>
-                <th>Request type:</th>
-                <th>Up</th>
-                <th>Down</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Data 1</td>
-                <td>Data 2</td>
-                <td>Data 3</td>
-                <td></td>
-                <td><button>Down</button></td>
-              </tr>
-              <tr>
-                <td>Data 4</td>
-                <td>Data 5</td>
-                <td>Data 6</td>
-                <td><button>Up</button></td>
-                <td><button>Down</button></td>
-              </tr>
-              <tr>
-                <td>Data 7</td>
-                <td>Data 8</td>
-                <td>Data 9</td>
-                <td><button>Up</button></td>
-                <td></td>
-              </tr>
-            </tbody>
-          </table>    
+      <h2>Queue:</h2>
+      <table class="5columns">
+        <thead>
+          <tr>
+            <th>Name:</th>
+            <th>Request time:</th>
+            <th>Request type:</th>
+            <th>Up</th>
+            <th>Down</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Data 1</td>
+            <td>Data 2</td>
+            <td>Data 3</td>
+            <td></td>
+            <td><button>Down</button></td>
+          </tr>
+          <tr>
+            <td>Data 4</td>
+            <td>Data 5</td>
+            <td>Data 6</td>
+            <td><button>Up</button></td>
+            <td><button>Down</button></td>
+          </tr>
+          <tr>
+            <td>Data 7</td>
+            <td>Data 8</td>
+            <td>Data 9</td>
+            <td><button>Up</button></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
     </section>
 
     <section class="log-table-section">
-        <h2>Processing:</h2>
-        <table class="3columns">
-            <thead>
-                <tr>
-                <th>Name:</th>
-                <th>Request time:</th>
-                <th>Request type:</th>
-                <th>Processing done?</th>
-                <th>Cancel processing</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                <td>Data 1</td>
-                <td>Data 2</td>
-                <td>Data 3</td>
-                <td><button>Done</button></td>
-                <td><button>Cancel</button></td>
-                </tr>
-            </tbody>
-        </table>  
+      <h2>Processing:</h2>
+      <table class="3columns">
+        <thead>
+          <tr>
+            <th>Name:</th>
+            <th>Request time:</th>
+            <th>Request type:</th>
+            <th>Processing done?</th>
+            <th>Cancel processing</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Data 1</td>
+            <td>Data 2</td>
+            <td>Data 3</td>
+            <td><button>Done</button></td>
+            <td><button>Cancel</button></td>
+          </tr>
+        </tbody>
+      </table>
     </section>
 
     <section class="log-table-section">
-        <h2>Queue log:</h2>
-        <table class="4columns">
-            <thead>
-              <tr>
-                <th>Name:</th>
-                <th>Request time:</th>
-                <th>Request type:</th>
-                <th>Request done:</th>
-              </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Data 1</td>
-                    <td>Data 2</td>
-                    <td>Data 3</td>
-                    <td>Data 3</td>
-                </tr>
-                <tr>
-                    <td>Data 4</td>
-                    <td>Data 5</td>
-                    <td>Data 6</td>
-                    <td>Data 3</td>
-                </tr>
-                <tr>
-                    <td>Data 1</td>
-                    <td>Data 2</td>
-                    <td>Data 3</td>
-                    <td>Data 3</td>
-                </tr>
-                <tr>
-                    <td>Data 4</td>
-                    <td>Data 5</td>
-                    <td>Data 6</td>
-                    <td>Data 3</td>
-                </tr>
-            </tbody>
-          </table>  
+      <h2>Queue log:</h2>
+      <table class="4columns">
+        <thead>
+          <tr>
+            <th>Name:</th>
+            <th>Request time:</th>
+            <th>Request type:</th>
+            <th>Request done:</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Data 1</td>
+            <td>Data 2</td>
+            <td>Data 3</td>
+            <td>Data 3</td>
+          </tr>
+          <tr>
+            <td>Data 4</td>
+            <td>Data 5</td>
+            <td>Data 6</td>
+            <td>Data 3</td>
+          </tr>
+          <tr>
+            <td>Data 1</td>
+            <td>Data 2</td>
+            <td>Data 3</td>
+            <td>Data 3</td>
+          </tr>
+          <tr>
+            <td>Data 4</td>
+            <td>Data 5</td>
+            <td>Data 6</td>
+            <td>Data 3</td>
+          </tr>
+        </tbody>
+      </table>
     </section>
 
     <div id="overlay">
       <div id="registration-form">
         <h2>Register</h2>
-        <p>Enter your name as it should be displayed in the queue tables, along with your email address for Microsoft Teams and email notifications.</p>
+        <p>Enter your name as it should be displayed in the queue tables, along with your email address for Microsoft
+          Teams and email notifications.</p>
         <form id="registerForm">
           <label for="name">Name:</label><br>
           <input type="text" id="name" required><br>
@@ -168,12 +187,18 @@
           <input type="email" id="email" required><br>
           <button type="submit">Register</button> <button id="closeButton">Close - read only view</button>
         </form>
-        
+
       </div>
     </div>
+  </main>
 
-    <script src="assets/js/register.js"></script>
+ <!-- Footer -->
+ <footer>
+ </footer>
 
-    <!--<script src="assets/js/script.js"></script>   --> 
+  <!--<script src="assets/js/register.js"></script>-->
+  <!--<script src="assets/js/script.js"></script>   -->
+  <!-- Font Awesome kit -->
+  <script src="https://kit.fontawesome.com/bed310c06c.js" crossorigin="anonymous"></script>
 </body>
 </html>
